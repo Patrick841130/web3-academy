@@ -78,7 +78,7 @@ export const ReservationService = {
             .eq('reservation_date', reservation_date)
             .eq('status', 'active');
 
-        if (count >= 15) throw new Error("해당 날짜는 매진되었습니다.");
+        if (count >= 15) throw new Error("죄송합니다. 방금 정원이 마감되었습니다.");
 
         const { data, error } = await supabase
             .from('reservations')

@@ -62,7 +62,12 @@ const ReservationSection = () => {
             setFormData({ name: '', phone: '', agree: false });
             setSelectedDate(null);
         } catch (error) {
-            alert(error.message);
+            // "죄송합니다..." 메시지는 그대로 띄우고, 그 외에는 친절한 안내 메시지
+            if (error.message.includes("마감")) {
+                alert(error.message);
+            } else {
+                alert("잠시 후 다시 시도해주세요.");
+            }
         } finally {
             setLoading(false);
         }
@@ -110,7 +115,7 @@ const ReservationSection = () => {
                                             </div>
                                             <div className="text-right">
                                                 <div className={`font-bold text-sm ${isSoldOut ? 'text-gray-500' : 'text-brand-neon'}`}>
-                                                    {isSoldOut ? '매진' : `잔여 ${item.seats}석`}
+                                                    {isSoldOut ? '매진 (정원 초과)' : `잔여 ${item.seats}석`}
                                                 </div>
                                                 {!isSoldOut && <div className="text-xs text-red-400 animate-pulse">마감 임박</div>}
                                             </div>
@@ -122,7 +127,12 @@ const ReservationSection = () => {
 
                         {/* Form */}
                         <div className="lg:w-1/2">
-                            <h3 className="text-xl font-bold text-white mb-6">참가자 정보</h3>
+                            <h3 className="text-xl font-bold text-white mb-2">참가자 정보</h3>
+                            {selectedDate && (
+                                <p className="text-brand-neon font-bold text-sm mb-4">
+                                    현재 잔여 좌석: {dates.find(d => d.value === selectedDate)?.seats}석
+                                </p>
+                            )}
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label className="block text-sm text-gray-400 mb-1">이름</label>
