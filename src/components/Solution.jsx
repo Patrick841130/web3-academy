@@ -19,7 +19,7 @@ const Solution = () => {
                     >
                         <h2 className="text-3xl md:text-5xl font-bold font-heading mb-6 leading-tight">
                             유일한 해답,<br />
-                            <span className="text-gradient-primary">천복 웹3 사관학교</span>
+                            <span className="text-gradient-primary">웹3사관학교</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-8 leading-relaxed">
                             우리는 단순한 지식 전달을 넘어,

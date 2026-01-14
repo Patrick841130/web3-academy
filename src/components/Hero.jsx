@@ -33,7 +33,7 @@ const Hero = () => {
                     <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-12">
                         개인정보 해킹과 중앙화된 금융의 위기.<br className="hidden md:block" />
                         데이터 주권을 되찾고 자산 증식의 새로운 로드맵을 제시하는<br className="hidden md:block" />
-                        <strong className="text-white">'천복 웹3 사관학교'</strong> 설명회에 초대합니다.
+                        <strong className="text-white">'웹3사관학교'</strong> 설명회에 초대합니다.
                     </p>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
