@@ -6,11 +6,11 @@ import { ReservationService } from '../lib/supabase';
 
 const ReservationSection = () => {
     const [dates, setDates] = useState([
-        { id: 1, date: '1월 26일 (월)', value: '2026-01-26', time: '14:00 ~ 16:00', seats: 15 },
-        { id: 2, date: '1월 27일 (화)', value: '2026-01-27', time: '14:00 ~ 16:00', seats: 15 },
-        { id: 3, date: '1월 28일 (수)', value: '2026-01-28', time: '14:00 ~ 16:00', seats: 15 },
-        { id: 4, date: '1월 29일 (목)', value: '2026-01-29', time: '14:00 ~ 16:00', seats: 15 },
-        { id: 5, date: '1월 30일 (금)', value: '2026-01-30', time: '14:00 ~ 16:00', seats: 15 },
+        { id: 1, date: '2월 02일 (월)', value: '2026-02-02', time: '14:00 ~ 16:00', seats: 15 },
+        { id: 2, date: '2월 03일 (화)', value: '2026-02-03', time: '14:00 ~ 16:00', seats: 15 },
+        { id: 3, date: '2월 04일 (수)', value: '2026-02-04', time: '14:00 ~ 16:00', seats: 15 },
+        { id: 4, date: '2월 05일 (목)', value: '2026-02-05', time: '14:00 ~ 16:00', seats: 15 },
+        { id: 5, date: '2월 06일 (금)', value: '2026-02-06', time: '14:00 ~ 16:00', seats: 15 },
     ]);
 
     const [selectedDate, setSelectedDate] = useState(null); // stores date value e.g. '2026-01-26'
