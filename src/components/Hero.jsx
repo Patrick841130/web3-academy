@@ -35,9 +35,29 @@ const Hero = () => {
                         데이터 주권을 되찾고 자산 증식의 새로운 로드맵을 제시하는<br className="hidden md:block" />
                         <strong className="text-white">'웹3사관학교'</strong> 설명회에 초대합니다.
                     </p>
-                    <p className="text-lg text-center leading-relaxed mb-8">
-                    <strong className="text-white">서울시 강남구 논현로87길 19, 6층</strong>
-                    </p>
+
+                    {/* --- 움직이는 무지개 네온 테두리 주소 박스 시작 --- */}
+                    {/* 1. 가장 바깥 컨테이너: 테두리 두께(p-[2px]) 및 위치 설정 */}
+                    <div className="relative mx-auto max-w-max mb-12 p-[2px] overflow-hidden rounded-xl">
+            
+                      {/* 2. 뒤에서 회전하는 무지개 그라데이션 레이어 (테두리 역할) */}
+                      {/* animate-[spin_3s_linear_infinite]: 3초에 한 바퀴씩 무한히 회전 */}
+                      {/* blur-sm: 약간 흐릿하게 해서 네온 느낌 강조 */}
+                      <div className="absolute inset-[-50%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,red,orange,yellow,green,blue,indigo,violet,red)] blur-[1px]" />
+            
+                      {/* 3. 실제 내용이 담긴 내부 박스 (배경을 가리는 역할) */}
+                      {/* bg-[#0D0D12]: 사이트 배경색과 비슷한 아주 어두운 색을 지정해 뒤를 가립니다. */}
+                      {/* 만약 사이트 배경색과 차이가 난다면 이 색상을 수정해야 합니다. (예: bg-brand-dark 등) */}
+                      <div className="relative rounded-[10px] bg-[#0D0D12] px-8 py-4 text-center">
+                        <p className="text-lg leading-relaxed">
+                          {/* 텍스트 자체에도 약간의 빛 번짐 효과(drop-shadow) 추가 */}
+                          <strong className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.7)]">
+                            서울시 강남구 논현로87길 19, 6층
+                          </strong>
+                        </p>
+                      </div>
+                    </div>
+                    {/* --- 움직이는 무지개 네온 테두리 주소 박스 끝 --- */}
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                         <a href="#reservation" className="group relative px-8 py-4 bg-brand-purple hover:bg-brand-neon transition-all duration-300 rounded-lg text-white font-bold text-lg shadow-[0_0_20px_rgba(217,70,239,0.5)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] overflow-hidden">
