@@ -30,10 +30,13 @@ const Hero = () => {
                         웹3 시대, 준비하지 않으면 도태됩니다.
                     </p>
 
-                    <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-12">
+                    <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed mb-4">
                         개인정보 해킹과 중앙화된 금융의 위기.<br className="hidden md:block" />
                         데이터 주권을 되찾고 자산 증식의 새로운 로드맵을 제시하는<br className="hidden md:block" />
                         <strong className="text-white">'웹3사관학교'</strong> 설명회에 초대합니다.
+                    </p>
+                    <p className="text-lg text-center leading-relaxed mb-8">
+                    <strong className="text-white">서울시 강남구 논현로87길 19, 6층</strong>
                     </p>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
